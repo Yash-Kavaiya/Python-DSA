@@ -1,0 +1,262 @@
+\documentclass[aspectratio=169]{beamer}
+\usepackage[utf8]{inputenc}
+\usepackage{tikz}
+\usepackage{amsmath}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{booktabs}
+
+% Google Colors
+\definecolor{GoogleBlue}{RGB}{66,133,244}
+\definecolor{GoogleRed}{RGB}{219,68,55}
+\definecolor{GoogleYellow}{RGB}{244,160,0}
+\definecolor{GoogleGreen}{RGB}{15,157,88}
+
+% Theme
+\usetheme{Madrid}
+\usecolortheme{default}
+\setbeamercolor{frametitle}{bg=GoogleBlue, fg=white}
+\setbeamercolor{title}{bg=GoogleBlue,fg=white}
+\setbeamercolor{block title}{bg=GoogleGreen,fg=white}
+\setbeamercolor{block body}{bg=GoogleGreen!10,fg=black}
+
+% Custom Header/Footer
+\setbeamertemplate{headline}{
+  \leavevmode%
+  \hbox{%
+  \begin{beamercolorbox}[wd=.5\paperwidth,ht=2.5ex,dp=1ex,left]{palette quaternary}%
+    \hspace*{2ex}\textcolor{white}{Python DSA Operations}
+  \end{beamercolorbox}%
+  \begin{beamercolorbox}[wd=.5\paperwidth,ht=2.5ex,dp=1ex,right]{palette quaternary}%
+    \textcolor{white}{Slide \insertframenumber}\hspace*{2ex}
+  \end{beamercolorbox}}%
+  \vskip0pt%
+}
+\setbeamertemplate{footline}{
+  \leavevmode%
+  \hbox{%
+  \begin{beamercolorbox}[wd=.33\paperwidth,ht=2.5ex,dp=1ex,left]{palette primary}%
+    \hspace*{2ex}\href{https://easy-ai-labs.lovable.app/}{\textcolor{white}{Easy AI Labs}}
+  \end{beamercolorbox}%
+  \begin{beamercolorbox}[wd=.34\paperwidth,ht=2.5ex,dp=1ex,center]{palette secondary}%
+    \href{https://www.linkedin.com/in/yashkavaiya}{\textcolor{white}{Yash Kavaiya}}
+  \end{beamercolorbox}%
+  \begin{beamercolorbox}[wd=.33\paperwidth,ht=2.5ex,dp=1ex,right]{palette tertiary}%
+    \href{https://www.linkedin.com/company/genai-guru}{\textcolor{white}{Gen AI Guru}}\hspace*{2ex}
+  \end{beamercolorbox}}%
+  \vskip0pt%
+}
+
+% Title Details
+\title{\textbf{Python List, Set, Dictionary Operation Time Complexities}}
+\subtitle{DSA Interview Preparation}
+\author{Presented by Expert}
+\institute{Google Colors DSA Series}
+\date{\today}
+
+\begin{document}
+
+% Title Slide
+{
+\setbeamertemplate{headline}{}
+\setbeamertemplate{footline}{}
+\begin{frame}
+\titlepage
+\vspace{-0.8cm}
+\begin{center}
+\begin{tikzpicture}
+\node[fill=GoogleBlue!12, rounded corners, minimum width=12cm, minimum height=2cm] {
+\begin{minipage}{11cm}
+\centering
+\textcolor{GoogleBlue}{\textbf{Coding Interviews में फेल ना हों!}}
+\vskip 0.10cm
+\textcolor{GoogleRed}{हर List, Set, Dictionary Operation की}
+\vskip 0.02cm
+\textcolor{GoogleGreen}{\footnotesize Time Complexity जानते हैं} 
+\end{minipage}
+};
+\end{tikzpicture}
+\end{center}
+\end{frame}
+}
+
+% Agenda
+\begin{frame}{Agenda}
+\begin{block}{इस Presentation में:}
+\begin{itemize}
+  \item Python List के Common Operations \& Time Complexity
+  \item Set, Dictionary के Average/Worst Case Complexity
+  \item DSA Interviews में क्यों ज़रूरी हैं ये Details
+  \item टेबल/चार्ट्स के साथ Comparison और Examples
+\end{itemize}
+\end{block}
+\end{frame}
+
+% Importance
+\begin{frame}{क्यों ज़रूरी है Complexity जानना?}
+\textbf{हर लाइन के कोड के पीछे Time Complexity है!}
+\vskip0.2cm
+\begin{itemize}
+  \item किसी भी Operation (append, pop, insert, delete) का टाइम कैसे बढ़ता है size के साथ?
+  \item Interview में कोड/Logic के साथ सही Complexity बतानी होती है
+  \item अगर सही Complexity नहीं समझी, तो TLE (Time Limit Exceeded) आ सकता है!
+  \item Efficient कोड में सही Data Structure और Method Selection ज़रूरी है
+\end{itemize}
+\end{frame}
+
+% Primary Table (from your image)
+\begin{frame}{List Operations - Time Complexity Table}
+\centering
+\small
+\begin{tabular}{lcc}
+\rowcolor{GoogleBlue!10}
+\textbf{Operation} & \textbf{Average Case} & \textbf{Amortized Worst Case} \\
+\midrule
+Copy                & $O(n)$    & $O(n)$ \\
+Append              & $O(1)$    & $O(1)$ \\
+Pop last            & $O(1)$    & $O(1)$ \\
+Pop intermediate    & $O(n)$    & $O(n)$ \\
+Insert              & $O(n)$    & $O(n)$ \\
+Get Item            & $O(1)$    & $O(1)$ \\
+Set Item            & $O(1)$    & $O(1)$ \\
+Delete Item         & $O(n)$    & $O(n)$ \\
+Iteration           & $O(n)$    & $O(n)$ \\
+Get Slice           & $O(k)$    & $O(k)$ \\
+Del Slice           & $O(n)$    & $O(n)$ \\
+Set Slice           & $O(k+n)$  & $O(k+n)$ \\
+Extend              & $O(k)$    & $O(k)$ \\
+Sort                & $O(n\log n)$ & $O(n\log n)$ \\
+Multiply            & $O(nk)$   & $O(nk)$ \\
+\texttt{x in s}     & $O(n)$    & $O(n)$ \\
+\texttt{min(s), max(s)} & $O(n)$ & $O(n)$ \\
+\texttt{len(s)}     & $O(1)$    & $O(1)$ \\
+\end{tabular}
+\end{frame}
+
+% Explanation Slide 1
+\begin{frame}{List Main Operations Explanation}
+\textcolor{GoogleRed}{\textbf{Append, Pop last, Get/Set Item:}} $O(1)$ (Constant Time)
+\begin{itemize}
+    \item List के अंत में Fast insert/delete
+    \item Index से access/update भी Constant Time
+\end{itemize}
+\vskip0.2cm
+\textcolor{GoogleBlue}{\textbf{Pop Intermediate, Insert, Delete Item:}} $O(n)$ (Linear Time)
+\begin{itemize}
+    \item List के बीच में डालना/निकालना मतलब सभी elements को शिफ्ट करना होता है
+    \item इसलिए ज़्यादातर समय $n$ पर निर्भर करता है
+\end{itemize}
+\end{frame}
+
+% Explanation Slide 2
+\begin{frame}{List Other Important Ops}
+\textcolor{GoogleGreen}{\textbf{Sort:}} $O(n\log n)$
+\begin{itemize}
+    \item Built-in sort, merge sort, quick sort सब $n\log n$ के आस-पास होते हैं
+\end{itemize}
+\textcolor{GoogleYellow}{\textbf{x in s, min(s), max(s):}} $O(n)$
+\begin{itemize}
+    \item किसी भी item के लिए पूरा list check होता है worst case में
+\end{itemize}
+\texttt{len(s):} $O(1)$
+\begin{itemize}
+    \item Length Python internally store करता है, instantly देता है
+\end{itemize}
+\end{frame}
+
+% Set Complexity (Hindi explanation high-yield ops)
+\begin{frame}{Set Operations - Complexity}
+\textbf{Set Membership, Get, Set, Delete:}
+\begin{itemize}
+    \item Average Case: $O(1)$ (Constant Time, hash table)
+    \item Worst/Amortized Case: $O(n)$ (hash collision scenario - rare)
+    \item Interview में बोले हमेशा average $O(1)$, ब्लू मून में $O(n)$
+\end{itemize}
+\end{frame}
+
+% Dictionary Complexity
+\begin{frame}{Dictionary Operations - Complexity}
+\textbf{Dictionary Get, Set, Delete:}
+\begin{itemize}
+    \item Average Case: $O(1)$ (Constant, hash lookup)
+    \item Amortized Worst Case: $O(n)$ (rare hash collision)
+    \item Copying entire dict: $O(n)$ (size के proportional)
+\end{itemize}
+\textbf{Note:} Interview में अगर पूछा जाए, always tell average $O(1)$, but acknowledge worst $O(n)$ in theory
+\end{frame}
+
+% Key Interview Table (Side-by-side)
+\begin{frame}{List, Set, Dict - Quick Interview Table}
+\centering
+\small
+\begin{tabular}{lccc}
+\rowcolor{GoogleYellow!10}
+\textbf{Operation} & \textbf{List} & \textbf{Set} & \textbf{Dict} \\
+\midrule
+Get item       & $O(1)$    & $O(1)$    & $O(1)$    \\
+Set item       & $O(1)$    & $O(1)$    & $O(1)$    \\
+Append/Insert  & $O(1)$/O(n) & $O(1)$  & $O(1)$    \\
+Delete         & $O(n)$    & $O(1)$    & $O(1)$    \\
+Search (in)    & $O(n)$    & $O(1)$    & $O(1)$    \\
+Copy           & $O(n)$    & $O(n)$    & $O(n)$    \\
+Sort           & $O(n\log n)$ & N/A     & N/A       \\
+\end{tabular}
+\end{frame}
+
+% Practical Tips
+\begin{frame}{प्रैक्टिकल इंटरव्यू टिप्स}
+\begin{itemize}
+    \item हमेशा बताओ: Constant vs Linear Time
+    \item Update/Search में List vs Set/Dict: Set/Dict always $O(1)$ (on average)
+    \item Rarely interview पूछेगा: worst-case collisions ($O(n)$)
+    \item Built-in functions fastest हैं, direct ऑपरेशन अगर possible है
+    \item लिस्ट के बीच में बार-बार insert/delete से बचें, वरना TLE आ सकता है
+\end{itemize}
+\end{frame}
+
+% Takeaways
+\begin{frame}{Key Takeaways}
+\begin{itemize}
+    \item हर Data Structure के Common Operations की Complexity याद करना जरूरी
+    \item Efficient code और Interview दोनों के लिए High Confidence देता है
+    \item Tables को Revise करते रहें, हर Leetcode/DSA सवाल में इनका प्रयोग करें
+    \item Built-in sort, hash-based search python में super optimized है
+\end{itemize}
+\centering
+\textcolor{GoogleBlue}{\textbf{Practice, Revise and Crack Coding Interviews!}}
+\end{frame}
+
+% Content/Connect Slide
+{
+\setbeamertemplate{headline}{}
+\begin{frame}{Content Details \& Follow for More Updates}
+\begin{block}{Presentation Content}
+\begin{itemize}
+\item \textbf{Topic:} Python Data Structure Operations - Time Complexity
+\item \textbf{Coverage:} List, Set, Dict: Average/Worst Case, Interview Tables, Practical Tips
+\item \textbf{Level:} Beginner to Pro: Interview & Leetcode Ready
+\item \textbf{Target:} CS Students | DSA | Coding Interviews
+\end{itemize}
+\end{block}
+\begin{block}{Connect With Us}
+\centering
+\begin{tabular}{ll}
+\textcolor{GoogleBlue}{\textbf{Website:}} & \href{https://easy-ai-labs.lovable.app/}{easy-ai-labs.lovable.app} \\
+\textcolor{GoogleRed}{\textbf{LinkedIn:}} & \href{https://www.linkedin.com/in/yashkavaiya}{Yash Kavaiya} \\
+\textcolor{GoogleGreen}{\textbf{Company:}} & \href{https://www.linkedin.com/company/genai-guru}{Gen AI Guru} \\
+\textcolor{GoogleYellow!80!black}{\textbf{YouTube:}} & \href{https://www.youtube.com/@genai-guru}{@genai-guru} \\
+\end{tabular}
+\end{block}
+\begin{center}
+\colorbox{GoogleBlue!15}{
+\begin{minipage}{11cm}
+\centering
+\textbf{Follow for more updates: DSA | Coding Interview | Python Performance}
+\end{minipage}
+}
+\end{center}
+\end{frame}
+}
+
+\end{document}
