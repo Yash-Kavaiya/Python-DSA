@@ -1,0 +1,185 @@
+\documentclass[aspectratio=169]{beamer}
+\usepackage[utf8]{inputenc}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{tikz}
+\usepackage{amsmath}
+\usepackage{listings}
+
+% Google Color Palette
+\definecolor{GoogleBlue}{RGB}{66,133,244}
+\definecolor{GoogleRed}{RGB}{219,68,55}
+\definecolor{GoogleYellow}{RGB}{244,160,0}
+\definecolor{GoogleGreen}{RGB}{15,157,88}
+\usetheme{Madrid}
+\setbeamercolor{frametitle}{bg=GoogleBlue, fg=white}
+\setbeamercolor{title}{bg=GoogleBlue,fg=white}
+
+% Custom header/footer as per expert theme
+\setbeamertemplate{headline}{
+  \leavevmode%
+  \hbox{%
+    \begin{beamercolorbox}[wd=.5\paperwidth,ht=2.5ex,dp=1ex,left]{palette quaternary}%
+      \hspace*{2ex}\textcolor{white}{Python DSA: Count Digits}
+    \end{beamercolorbox}%
+    \begin{beamercolorbox}[wd=.5\paperwidth,ht=2.5ex,dp=1ex,right]{palette quaternary}%
+      \textcolor{white}{Slide \insertframenumber}\hspace*{2ex}
+    \end{beamercolorbox}}%
+  \vskip0pt%
+}
+\setbeamertemplate{footline}{
+  \leavevmode%
+  \hbox{%
+    \begin{beamercolorbox}[wd=.33\paperwidth,ht=2.5ex,dp=1ex,left]{palette primary}%
+      \hspace*{2ex}\href{https://easy-ai-labs.lovable.app/}{\textcolor{white}{Easy AI Labs}}
+    \end{beamercolorbox}%
+    \begin{beamercolorbox}[wd=.34\paperwidth,ht=2.5ex,dp=1ex,center]{palette secondary}%
+      \href{https://www.linkedin.com/in/yashkavaiya}{\textcolor{white}{Yash Kavaiya}}
+    \end{beamercolorbox}%
+    \begin{beamercolorbox}[wd=.33\paperwidth,ht=2.5ex,dp=1ex,right]{palette tertiary}%
+      \href{https://www.linkedin.com/company/genai-guru}{\textcolor{white}{Gen AI Guru}}\hspace*{2ex}
+    \end{beamercolorbox}}%
+  \vskip0pt%
+}
+
+\title{\textbf{Count Digits in a Number}}
+\subtitle{DSA Approaches: While Loop, Logarithmic}
+\author{Presented by Expert}
+\date{\today}
+
+\begin{document}
+
+% Title
+\begin{frame}
+\titlepage
+\end{frame}
+
+% Concept
+\begin{frame}{Count Digits - Problem Statement}
+\textbf{Input:} An integer $n$
+
+\textbf{Output:} Total number of digits in $n$
+
+\textbf{Examples:}
+\begin{itemize}
+  \item $5438 \rightarrow 4$
+  \item $177715 \rightarrow 6$
+  \item $973 \rightarrow 3$
+\end{itemize}
+\end{frame}
+
+% Visual step-by-step (while approach)
+\begin{frame}{Iterative Solution - Visual Steps}
+\begin{block}{Algorithm}
+\begin{itemize}
+  \item Set $count=0$, $num=n$
+  \item While $num>0$: $count+=1$ and $num \gets num // 10$
+  \item Return $count$
+\end{itemize}
+\end{block}
+\begin{center}
+\begin{tikzpicture}[node distance=1.6cm, scale=0.85]
+\node[draw, fill=GoogleYellow!10, rounded corners] (n1) {num=5438, count=0};
+\node[draw, fill=GoogleRed!10,rounded corners,below=of n1] (n2) {num=543, count=1};
+\node[draw, fill=GoogleGreen!10,rounded corners,below=of n2] (n3) {num=54, count=2};
+\node[draw, fill=GoogleBlue!10,rounded corners,below=of n3] (n4) {num=5, count=3};
+\node[draw, rounded corners,below=of n4] (n5) {num=0, count=4};
+\draw[->,thick] (n1) -- (n2);
+\draw[->,thick] (n2) -- (n3);
+\draw[->,thick] (n3) -- (n4);
+\draw[->,thick] (n4) -- (n5);
+\end{tikzpicture}
+\end{center}
+\end{frame}
+
+% Python code iterative
+\begin{frame}[fragile]{Python Code - Iterative While}
+\begin{lstlisting}[language=Python]
+def count_digits(n):
+    num = n
+    count = 0
+    while num > 0:
+        count += 1
+        num = num // 10
+    return count
+
+print(count_digits(5438))    # Output: 4
+print(count_digits(177715))  # Output: 6
+print(count_digits(973))     # Output: 3
+\end{lstlisting}
+\end{frame}
+
+% Logarithmic shortcut
+\begin{frame}{Logarithmic Shortcut}
+\textbf{Formula:}
+\[
+\text{digits} = \lfloor \log_{10}(n) + 1 \rfloor
+\]
+
+\textbf{Examples:}
+\begin{itemize}
+  \item $\log_{10}(5438) = 3.735 \rightarrow 4$
+  \item $\log_{10}(177715) = 5.249 \rightarrow 6$
+  \item $\log_{10}(973) = 2.988 \rightarrow 3$
+\end{itemize}
+\end{frame}
+
+% Python code logarithmic
+\begin{frame}[fragile]{Python Code - Logarithmic Approach}
+\begin{lstlisting}[language=Python]
+from math import log10
+
+def count_digits(num):
+    return int(log10(num) + 1)
+
+print(count_digits(5438))    # Output: 4
+print(count_digits(177715))  # Output: 6
+print(count_digits(973))     # Output: 3
+\end{lstlisting}
+\end{frame}
+
+% Complexity slide
+\begin{frame}{Time and Space Complexity}
+\textbf{Iterative Approach:}
+\begin{itemize}
+  \item Time: $O(\log_{10} n)$ (proportional to number of digits)
+  \item Space: $O(1)$
+\end{itemize}
+\textbf{Logarithmic Formula:}
+\begin{itemize}
+  \item Time: $O(1)$ (one math function call)
+  \item Space: $O(1)$
+\end{itemize}
+\end{frame}
+
+% Footer/Connect slide
+{
+\setbeamertemplate{headline}{}
+\begin{frame}[fragile]{Content Details \& Follow for Updates}
+\begin{block}{Presentation Content}
+\begin{itemize}
+\item \textbf{Topic:} Python Count Digits Two-Approach
+\item \textbf{Includes:} Visual step, code, formulas, complexity discussion
+\end{itemize}
+\end{block}
+
+\begin{block}{Connect With Us}
+\centering
+\begin{tabular}{ll}
+\textcolor{GoogleBlue}{\textbf{Website:}} & \href{https://easy-ai-labs.lovable.app/}{easy-ai-labs.lovable.app} \\
+\textcolor{GoogleRed}{\textbf{LinkedIn:}} & \href{https://www.linkedin.com/in/yashkavaiya}{Yash Kavaiya} \\
+\textcolor{GoogleGreen}{\textbf{Company:}} & \href{https://www.linkedin.com/company/genai-guru}{Gen AI Guru} \\
+\textcolor{GoogleYellow!80!black}{\textbf{YouTube:}} & \href{https://www.youtube.com/@genai-guru}{@genai-guru} \\
+\end{tabular}
+\end{block}
+
+\begin{center}
+\colorbox{GoogleBlue!10}{\begin{minipage}{11cm}
+\centering
+\textbf{Follow for more: DSA | Python | Coding Interview Tricks}
+\end{minipage}}
+\end{center}
+\end{frame}
+}
+
+\end{document}
