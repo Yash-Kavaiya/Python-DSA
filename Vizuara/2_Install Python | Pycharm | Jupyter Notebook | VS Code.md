@@ -1,5 +1,7 @@
+#  Install Python | Pycharm | Jupyter Notebook | VS Code
+
 ### Overview 📊
-- The goal is to set up Python locally, run a first script, and choose a productive editor/IDE workflow for learning data structures and algorithms in Python.[1]
+- The goal is to set up Python locally, run a first script, and choose a productive editor/IDE workflow for learning data structures and algorithms in Python.
 - The notes include step-by-step installs, verification commands, quick REPL usage, script execution, and editor tooling with PyCharm, Jupyter Notebook, Anaconda Navigator, and VS Code.
 
 ### Install Python ⚙️

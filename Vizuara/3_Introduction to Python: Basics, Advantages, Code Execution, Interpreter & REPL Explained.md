@@ -1,5 +1,3 @@
-Based on the provided transcription about Python introduction, here are comprehensive GitHub-flavored markdown notes:
-
 # 🐍 Introduction to Python: Basics, Advantages, Code Execution, Interpreter & REPL
 
 ## 📋 Table of Contents
