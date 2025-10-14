@@ -1,18 +1,14 @@
----
-
 # 📚 Learn Data Structures and Algorithms in Python
 
 **From Basic to Advance | A Beginner-Friendly Course**
 
----
-
 ## 🎯 Why Should You Learn DSA?
 
-Data Structures and Algorithms (DSA) are fundamental skills that every programmer needs, regardless of their background or career goals. Whether you're a college graduate or working professional aiming for roles in software development, data analysis, or data science, DSA proficiency is essential for career advancement.[1][2][3][4]
+Data Structures and Algorithms (DSA) are fundamental skills that every programmer needs, regardless of their background or career goals. Whether you're a college graduate or working professional aiming for roles in software development, data analysis, or data science, DSA proficiency is essential for career advancement.
 
 ### The Interview Reality
 
-When companies hire for specific roles (development, machine learning engineering, etc.), thousands of candidates apply with similar skill sets and projects. Organizations need a reliable method to identify the best candidates, and DSA serves as that differentiator.[5][6][7]
+When companies hire for specific roles (development, machine learning engineering, etc.), thousands of candidates apply with similar skill sets and projects. Organizations need a reliable method to identify the best candidates, and DSA serves as that differentiator.
 
 **Companies prioritize candidates who demonstrate:**
 
@@ -21,11 +17,11 @@ When companies hire for specific roles (development, machine learning engineerin
 - **Logical reasoning** to approach problems from multiple angles
 - **Adaptability** when one solution doesn't perfectly fit the scenario
 
-Most product-based companies set the first round as a DSA assessment, with many conducting two dedicated DSA interview rounds. This is why mastering DSA is non-negotiable for aspiring developers, regardless of technical or non-technical background.[2][3][4][7]
+Most product-based companies set the first round as a DSA assessment, with many conducting two dedicated DSA interview rounds. This is why mastering DSA is non-negotiable for aspiring developers, regardless of technical or non-technical background.
 
 ### Beyond Interviews
 
-While daily project work may not involve solving DSA problems directly, the knowledge helps developers think more clearly, write optimized code, and create scalable solutions. DSA principles enable you to choose efficient data structures and algorithms that enhance performance and eliminate future risks.[8][9][3][2]
+While daily project work may not involve solving DSA problems directly, the knowledge helps developers think more clearly, write optimized code, and create scalable solutions. DSA principles enable you to choose efficient data structures and algorithms that enhance performance and eliminate future risks.
 
 | **Skill Impact** | **Without DSA** | **With DSA** |
 |---|---|---|
@@ -38,7 +34,7 @@ While daily project work may not involve solving DSA problems directly, the know
 
 ## 📊 What Are Data Structures?
 
-A **data structure** is a specialized format for organizing, processing, retrieving, and storing data efficiently. The way data is structured directly impacts how quickly and effectively programs can access and manipulate that information.[10][11][1][2]
+A **data structure** is a specialized format for organizing, processing, retrieving, and storing data efficiently. The way data is structured directly impacts how quickly and effectively programs can access and manipulate that information.
 
 ### Real-World Analogy: Library System
 
@@ -98,7 +94,7 @@ mindmap
 
 ## ⚙️ What Are Algorithms?
 
-**Algorithms** are step-by-step instructions that dictate how data is processed to produce meaningful results. They define the logic for manipulating data within data structures to achieve desired outcomes.[3][11][1][10]
+**Algorithms** are step-by-step instructions that dictate how data is processed to produce meaningful results. They define the logic for manipulating data within data structures to achieve desired outcomes.
 
 ### Travel Analogy: Route Selection
 
@@ -153,11 +149,6 @@ Different problems require different algorithmic approaches. The best algorithm 
 - **Data size**: Does it scale with large datasets?
 - **Problem constraints**: What are the specific requirements?
 
-***
-
-## 👨‍💻 Meet Your Instructor
-
-**Sourav Jana** - Full Stack Web Developer at Vizuara[12]
 
 ### Professional Background
 
@@ -177,13 +168,12 @@ Working as a **Full Stack Web Developer** at Vizuara with experience across mult
 - Developed portfolio projects to demonstrate capabilities
 - Successfully transitioned into software engineering
 
-> **"If I can do it, you can do it too"** - The instructor's journey proves that dedication and consistent effort matter more than educational background.[4][13]
+> **"If I can do it, you can do it too"** - The instructor's journey proves that dedication and consistent effort matter more than educational background.
 
-***
 
 ## 📋 Course Content Overview
 
-This comprehensive course covers essential data structures and algorithms from beginner to advanced levels.[14][15]
+This comprehensive course covers essential data structures and algorithms from beginner to advanced levels.
 
 ### Data Structures Covered
 
@@ -217,10 +207,6 @@ graph LR
     C --> P[Backtracking]
     C --> Q[Greedy]
     C --> R[Dynamic Programming]
-    
-    style A fill:#e1f5ff
-    style B fill:#ffe1e1
-    style C fill:#e1ffe1
 ```
 
 ### Algorithms Covered
@@ -234,8 +220,6 @@ graph LR
 7. 💚 **Greedy Algorithms** - Making locally optimal choices
 8. 🚀 **Dynamic Programming** - Optimizing overlapping subproblems
 
----
-
 ## 🎓 Learning Methodology
 
 ### Progressive Difficulty Approach
@@ -248,10 +232,7 @@ flowchart LR
     D --> E[Progress to Medium]
     E --> F[Master Hard Problems]
     F --> G[Interview Ready]
-    
-    style A fill:#ffd6a5
-    style D fill:#caffbf
-    style G fill:#9bf6ff
+
 ```
 
 ### Course Philosophy
@@ -274,19 +255,12 @@ flowchart LR
 | 🏆 **Interview-Oriented** | Practice with actual coding interview questions |
 | 🌟 **Non-CS Friendly** | Designed for learners from any background |
 
-***
-
 ## ✅ Course Requirements
-
-<details>
-<summary><b>Prerequisites</b></summary>
 
 - ✅ **No Python knowledge required** - Taught from basics
 - ✅ **No programming background needed** - Complete beginner-friendly
 - ✅ **Non-CS background welcome** - Designed for all educational backgrounds
 - ✅ **Dedication & consistency** - Commit to regular practice
-
-</details>
 
 ### Success Formula
 
@@ -296,8 +270,6 @@ The only requirements for course success:
 2. **Consistency** 📅 - Practice regularly, not sporadically
 3. **Problem-solving mindset** 🧠 - Approach challenges with curiosity
 4. **Patience** ⏳ - Master concepts progressively
-
-***
 
 ## 🎬 Course Outcomes
 
@@ -310,17 +282,12 @@ After completing this course, you will:
 ✅ **Write optimized code** that scales efficiently
 ✅ **Build a strong technical foundation** regardless of your background
 
-***
 
 ## 🚀 Your Learning Journey Starts Here
 
-This course transforms complete beginners into confident problem solvers capable of tackling complex DSA challenges. With structured lessons, practical examples, and progressive difficulty levels, mastering DSA becomes an enjoyable and rewarding journey.[16][13][4][14]
+This course transforms complete beginners into confident problem solvers capable of tackling complex DSA challenges. With structured lessons, practical examples, and progressive difficulty levels, mastering DSA becomes an enjoyable and rewarding journey.
 
-**Remember**: Whether you're from a technical or non-technical background, DSA proficiency opens doors to top tech companies and high-paying roles in software development.[3][4]
+**Remember**: Whether you're from a technical or non-technical background, DSA proficiency opens doors to top tech companies and high-paying roles in software development
 
 > 💡 **Fun Learning Promise**: Problem-solving will become enjoyable as you progress through the course and witness your growth from basic concepts to advanced algorithmic thinking.
 
-***
-[24](https://elearn.nptel.ac.in/shop/nptel/programming-data-structures-and-algorithms-using-python/)
-[25](https://www.reddit.com/r/learnprogramming/comments/13dmci6/course_recommendation_data_structures_and/)
-[26](https://dev.to/shreyvijayvargiya/learning-dsa-after-4-years-of-experience-2k7f)
