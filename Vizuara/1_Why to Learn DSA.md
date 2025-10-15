@@ -2,6 +2,9 @@
 
 **From Basic to Advance | A Beginner-Friendly Course**
 
+<img width="512" height="512" alt="image" src="https://github.com/user-attachments/assets/3944a931-f1b1-42a7-9acd-dac93635d936" />
+
+
 ## 🎯 Why Should You Learn DSA?
 
 Data Structures and Algorithms (DSA) are fundamental skills that every programmer needs, regardless of their background or career goals. Whether you're a college graduate or working professional aiming for roles in software development, data analysis, or data science, DSA proficiency is essential for career advancement.
@@ -61,36 +64,7 @@ With proper data structure (organized library system):
 | File System | Tree | Hierarchical organization |
 | Google Maps | Graph | Find shortest paths between locations |
 
-```mermaid
-mindmap
-  root((Data Structures))
-    Linear Structures
-      Array/List
-        Fixed size
-        Random access
-      String
-        Character sequences
-      Stack
-        LIFO principle
-      Queue
-        FIFO principle
-      Linked List
-        Dynamic size
-    Non-Linear Structures
-      Tree
-        Hierarchical data
-        Binary Search Tree
-      Graph
-        Network relationships
-        Nodes and edges
-    Hash-Based
-      Set
-        Unique elements
-      Dictionary
-        Key-value pairs
-```
-
-***
+<img width="512" height="512" alt="image" src="https://github.com/user-attachments/assets/def6c982-29d0-4e7c-8af8-682c0740c5b7" />
 
 ## ⚙️ What Are Algorithms?
 
@@ -186,28 +160,8 @@ This comprehensive course covers essential data structures and algorithms from b
 | **Hierarchical** | Tree | File systems, organization charts |
 | **Network** | Graph | Social networks, maps, routing |
 
-```mermaid
-graph LR
-    A[DSA Course Journey] --> B[Data Structures]
-    A --> C[Algorithms]
-    
-    B --> D[List/Array]
-    B --> E[String]
-    B --> F[Set & Dictionary]
-    B --> G[Stack & Queue]
-    B --> H[Linked List]
-    B --> I[Tree]
-    B --> J[Graph]
-    
-    C --> K[Two Pointers]
-    C --> L[Sliding Window]
-    C --> M[Searching]
-    C --> N[Sorting]
-    C --> O[Recursion]
-    C --> P[Backtracking]
-    C --> Q[Greedy]
-    C --> R[Dynamic Programming]
-```
+<img width="512" height="512" alt="image" src="https://github.com/user-attachments/assets/01743a75-cdc0-424e-b51e-ca8fa4a3daf8" />
+
 
 ### Algorithms Covered
 
