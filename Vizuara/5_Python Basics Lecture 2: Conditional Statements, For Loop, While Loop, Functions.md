@@ -9,7 +9,7 @@
 6. [Lambda Functions](#lambda-functions)
 7. [Variable Scope](#variable-scope)
 
----
+
 
 ## 1. Introduction to Flow Control
 
@@ -22,7 +22,6 @@
 | **Conditional Statements** | Execute code based on conditions | `if`, `elif`, `else` |
 | **Looping Statements** | Repeat code multiple times | `while`, `for` |
 
----
 
 ## 2. Conditional Statements
 
@@ -67,8 +66,6 @@ else:
 - The condition `num % 2 == 0` checks if the number is divisible by 2
 - If remainder is 0, the number is even
 - Otherwise, it's odd
-
----
 
 ### 2.2 If-Elif-Else Statement
 
@@ -128,7 +125,6 @@ else:
 | friend_score (60) > your_score (40) | **True** → Execute |
 | Both equal | Not checked |
 
----
 
 #### Example 3: FizzBuzz Problem
 
@@ -156,7 +152,6 @@ else:
 
 **Important:** Once a condition is satisfied, the corresponding block executes and the remaining conditions are **skipped**.
 
----
 
 ## 3. Looping Statements
 
@@ -178,8 +173,6 @@ Loops are used to perform **repetitive tasks** without writing the same code mul
 | **Increment/Decrement** | Manual | Automatic |
 | **Use Case** | Unknown iterations | Known iterations |
 | **Infinite Loop Risk** | Higher (if increment forgotten) | Lower |
-
----
 
 ### 3.1 While Loop
 
@@ -486,8 +479,6 @@ flowchart TD
     G --> H
 ```
 
----
-
 ### 5.3 Function Examples
 
 #### Example 10: Add Two Numbers
@@ -532,8 +523,6 @@ flowchart LR
 - **Parameters** are variables used in function definition
 - **Arguments** are actual values passed when calling the function
 
----
-
 ### 5.5 Important Notes
 
 1. **Function must be called to execute:**
@@ -555,8 +544,6 @@ flowchart LR
    print(add(5, 3)) # Shows: 8
    ```
 
----
-
 ## 6. Lambda Functions
 
 **Lambda functions** are small, anonymous (unnamed) functions defined in a single line.
@@ -571,8 +558,6 @@ flowchart LR
 | **Arguments** | Any number | Any number |
 | **Syntax** | One line | Multiple lines |
 | **Return** | Implicit | Explicit `return` |
-
----
 
 ### 6.1 Lambda Syntax
 
@@ -589,8 +574,6 @@ flowchart LR
     C --> D[expression]
     D --> E[implicit return]
 ```
-
----
 
 ### 6.2 Lambda Examples
 
@@ -621,8 +604,6 @@ def max_of(a, b):
 | Readability | Good for simple | Better for complex |
 | Reusability | Limited | High |
 
----
-
 ### 6.3 How Lambda Works
 
 ```mermaid
@@ -639,8 +620,6 @@ a if a > b else b
 - If `a > b` is True → return `a`
 - Otherwise → return `b`
 
----
-
 ### 6.4 When to Use Lambda
 
 ✅ **Good Use Cases:**
@@ -654,8 +633,6 @@ a if a > b else b
 - Multiple statements required
 - Need to reuse multiple times
 - Debugging is important
-
----
 
 ## 7. Variable Scope
 
@@ -677,7 +654,6 @@ flowchart TD
     C --> G[Block Scope]
 ```
 
----
 
 ### 7.2 Scope Rules
 
@@ -867,8 +843,6 @@ flowchart TD
     G --> H[Prints: 30]
 ```
 
----
-
 ### 7.4 Scope Resolution Rules (LEGB)
 
 Python searches for variables in this order:
@@ -894,7 +868,6 @@ flowchart TD
 | **G** | Global | Module level |
 | **B** | Built-in | Python built-in names |
 
----
 
 ### 7.5 Scope Best Practices
 
@@ -909,8 +882,6 @@ flowchart TD
 - Rely on global variables inside functions
 - Modify global state without reason
 
----
-
 ## Summary Tables
 
 ### Flow Control Summary
@@ -923,16 +894,12 @@ flowchart TD
 | Break | `break` | Exit loop early | - |
 | Continue | `continue` | Skip iteration | - |
 
----
-
 ### Function Types Summary
 
 | Type | Syntax | Name | Use Case |
 |------|--------|------|----------|
 | Regular | `def name(params):` | Named | Complex, reusable code |
 | Lambda | `lambda params: expr` | Anonymous | Simple, one-time operations |
-
----
 
 ### Scope Summary
 
@@ -942,7 +909,6 @@ flowchart TD
 | Local (Function) | Inside function | Function only | `def f(): x = 10` |
 | Local (Block) | Inside if/for/while | Block only | `if True: x = 10` |
 
----
 
 ## Key Takeaways
 
@@ -957,7 +923,6 @@ flowchart TD
 9. **Local variables shadow global** variables with same names
 10. **Parameters shadow global** variables inside functions
 
----
 
 ## Practice Exercises
 
@@ -985,7 +950,6 @@ Create lambda function to calculate square of a number.
 ### Exercise 8: Scope
 Predict the output of code with global and local variables.
 
----
 
 ## Glossary
 
@@ -1001,6 +965,5 @@ Predict the output of code with global and local variables.
 | **Block** | Group of statements with same indentation |
 | **Indentation** | Spaces/tabs defining code blocks in Python |
 
----
 
 **End of Notes**
