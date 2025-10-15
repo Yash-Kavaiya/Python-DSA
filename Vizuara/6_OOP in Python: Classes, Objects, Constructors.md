@@ -9,8 +9,6 @@
 6. [Methods in Python](#methods-in-python)
 7. [Real-World Example: Bank Account System](#real-world-example-bank-account-system)
 
----
-
 ## 1. Introduction to Data Types
 
 ### 1.1 Predefined Data Types
@@ -27,7 +25,6 @@
 | **dict** | Collection | `{"key": "value"}` | Key-value pairs |
 | **set** | Collection | `{1, 2, 3}` | Unordered, unique |
 
----
 
 ### 1.2 Need for User-Defined Data Types
 
@@ -43,8 +40,6 @@ Predefined data types are **insufficient** for complex real-world problems:
 
 **Solution:** Create **user-defined data types** using **Classes**
 
----
-
 ### 1.3 Introduction to Classes
 
 > **Class**: A template or blueprint for creating real-world entities with custom data types
@@ -58,8 +53,6 @@ flowchart LR
     D --> F[Attributes/Properties]
     E --> G[Methods/Functions]
 ```
-
----
 
 ## 2. Understanding Classes and Objects
 
@@ -93,8 +86,6 @@ flowchart TD
 **Key Insight:** 
 - **Class** = Blank form (just structure, no meaning alone)
 - **Object** = Filled form (has real data, makes sense)
-
----
 
 ### 2.2 Class vs Object
 
