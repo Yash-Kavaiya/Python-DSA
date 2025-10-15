@@ -463,8 +463,6 @@ def function_name(parameters):
 | `parameters` | Input variables | No |
 | `return` | Output value | No |
 
----
-
 ### 5.2 Function Flow Diagram
 
 ```mermaid
