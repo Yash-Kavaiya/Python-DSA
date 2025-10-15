@@ -59,38 +59,17 @@
 | PyCharm  | Full IDE | Professional dev | Download IDE; create project and run  |
 
 ### Workflow flowchart (install to first run)
-```mermaid
-flowchart TD
-  A[Download Python] --> B[Install (OS-detected)]
-  B --> C{Windows?}
-  C -- Yes --> D[Verify: py --version]
-  C -- No --> E[Verify: python3 --version]
-  D --> F[Open IDLE]
-  E --> F[Open IDLE]
-  F --> G[Create intro.py]
-  G --> H[Run in IDLE (F5)]
-  G --> I[Run in Terminal]
-```
+
+<img width="391" height="559" alt="image" src="https://github.com/user-attachments/assets/01451806-7187-463b-81a2-01b02cffb0bf" />
 
 - The flow highlights download, install, verification, and two execution paths: IDLE or Terminal
 
 ### VS Code run sequence
-```mermaid
-sequenceDiagram
-  participant Dev as Developer
-  participant VS as VS Code
-  participant Ext as Python Extension
-  participant Term as Integrated Terminal
 
-  Dev->>VS: Open folder
-  Dev->>VS: Python: Select Interpreter
-  VS->>Ext: Store interpreter for workspace
-  Dev->>VS: Run Python File in Terminal
-  VS->>Term: Spawn terminal with environment
-  Term->>Ext: Use selected interpreter to execute
-```
+<img width="512" height="446" alt="image" src="https://github.com/user-attachments/assets/c5d9b8dc-0176-4268-813f-7d4ba3e56da5" />
 
-- Selecting the interpreter ensures the terminal and language features use the same Python environment for reliable execution.[5]
+
+- Selecting the interpreter ensures the terminal and language features use the same Python environment for reliable execution.
 
 ### Essential commands (copy-ready)
 ```bash
@@ -123,10 +102,6 @@ jupyter notebook
 
 ## Common pitfalls and fixes ⚠️
 
-- Running `intro.py` inside the Python REPL will fail; exit the REPL and run from the shell like `py intro.py` on Windows or `python3 intro.py` on macOS/Linux.[3]
+- Running `intro.py` inside the Python REPL will fail; exit the REPL and run from the shell like `py intro.py` on Windows or `python3 intro.py` on macOS/Linux.
 
-- After selecting an interpreter in VS Code, that choice persists for the workspace and drives both language services and run/debug behavior.[5]
-
-
-[31](https://www.jetbrains.com/help/pycharm/installation-guide.html)
-[32](https://www.youtube.com/watch?v=ZBGzx7-KjSM)
+- After selecting an interpreter in VS Code, that choice persists for the workspace and drives both language services and run/debug behavior.
